@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <title>SKILSTAK doge</title>
+  <title>NanoIsDaBest</title>
  </head>
  <body>
    <script src="js/phaser.js"></script>
    <script>
      var game = new Phaser.Game(320,568);
      console.log("Heller People of the Internet")
-  </script>
+     game.state.add('play',NanoIsDaBest.Play);
+     game.state.start('play');
+    </script>
   </body>
+
 </html>
