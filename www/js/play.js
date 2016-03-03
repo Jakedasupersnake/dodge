@@ -12,7 +12,7 @@ DogeDodge.Play.prototype = {
 
   preload: function () {
     this.load.image('background','assets/background.png');
-    this.load.spritesheet('icon', 'assets/icon.png',32,32);
+    this.load.spritesheet('dodger', 'assets/icon.png',32,32);
   },
 
   create: function () {
@@ -33,16 +33,18 @@ DogeDodge.Play.prototype = {
 
 
     // movement keys
-    this.cusors = game.input.keyboard.createCursorKeys();
+    this.cursors = game.input.keyboard.createCursorKeys();
 
   },
 
   update: function () {
     if (this.cursors.left.isDown) {
       this.dodger.x += 10;
+      this.dodger.scale.set(-1)
     }
-    if (this.cursor.right.isDown) {
+    if (this.cursors.right.isDown) {
       this.dodger.x += 10;
+      this.dodger.scale.set(2)
     }
   }
 
