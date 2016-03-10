@@ -32,6 +32,7 @@ DogeDodge.Play.prototype = {
     this.dodger.animations.play('blink',2,true); // (name,fps,loop)
 
 
+
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
 
@@ -44,7 +45,7 @@ DogeDodge.Play.prototype = {
     }
     if (this.cursors.right.isDown) {
       this.dodger.x += 10;
-      this.dodger.scale.set(2)
+      this.dodger.scale.set(-1)
     }
   }
 
